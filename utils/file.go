@@ -1,10 +1,8 @@
 // utils/file.go
 package utils
 
-import (
-	"io/ioutil"
-)
+import "os"
 
 func SaveFile(content, path string) error {
-	return ioutil.WriteFile(path, []byte(content), 0644)
+	return os.WriteFile(path, []byte(content), 0644)
 }
